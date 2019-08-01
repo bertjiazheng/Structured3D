@@ -1,0 +1,193 @@
+body {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 300;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #333;
+  padding-top: 70px;
+}
+
+body *::selection {
+  background: #e67e22;
+  color: #fff;
+}
+
+.container {
+  max-width: 980px;
+}
+
+.top-strip {
+  background-color: #000;
+  height: 0.25em;
+  width: 100%;
+}
+
+h1,h2,h3 {
+  color: #1a1a1a;
+  font-weight: 300;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.page-header {
+  margin-top: 20px;
+  /*border-color: #3498db;*/
+}
+
+p.authors {
+  margin-bottom: 5px;
+  color: #808080;
+  font-size: 20px;
+}
+
+p.authors a {
+  border-color: #dedede;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  color: inherit;
+}
+
+.navbar a {
+  border-bottom: 0;
+}
+
+p.lead.authors a {
+  border-bottom: none;
+}
+
+a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.thumb {
+  margin: 20px 0;
+  border: 1px solid #808080;
+}
+
+pre {
+  color: #333;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+#vimeo-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+#vimeo-embed iframe,
+#vimeo-embed object,
+#vimeo-embed embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.people-pic {
+  max-width: 125px;
+  max-height: 125px;
+}
+
+.people-name {
+  margin: 5px 0 10px;
+}
+
+.people-name h6 {
+  margin: 2px 0;
+  font-weight: 300;
+  font-size: 11px;
+}
+
+#sequence {
+  height: 70px;
+}
+
+#legend {
+  padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+  font-weight: 300;
+  fill: #fff;
+}
+
+#chart {
+  position: relative;
+  border-right: 1px solid #eee;
+}
+
+#chart path {
+  stroke: #fff;
+}
+
+#explanation {
+  position: absolute;
+  top: 240px;
+  left: 180px;
+  width: 140px;
+  text-align: center;
+  color: #666;
+  z-index: -1;
+}
+
+#percentage {
+  font-size: 2.5em;
+}
+
+.sponsor img {
+  max-height: 150px;
+  max-width: 350px;
+  /*border: 1px solid black;*/
+  padding: 10px;
+  margin-right: 20px;
+
+}
+
+.vid-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.vid-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

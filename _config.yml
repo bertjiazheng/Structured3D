@@ -1,0 +1,12 @@
+title: Structured3D A Large Photo-realistic Dataset for Structured 3D Modeling
+email: structured3d@googlegroup.com
+description: Website for the Structured3D Dataset
+  ---
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# Build settings
+markdown: kramdown
+include: ['_pages']
+
+# Google Analytics
+google_analytics: UA-111088147-2
