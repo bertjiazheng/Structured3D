@@ -1,0 +1,16 @@
+living room
+kitchen
+bedroom
+bathroom
+balcony
+corridor
+dining room
+study
+studio
+store room
+garden
+laundry room
+office
+basement
+garage
+undefined
