@@ -6,7 +6,7 @@ Structured3D is a large-scale photo-realistic dataset containing 3.5K house desi
 
 ## Paper
 
-[**Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling**]()
+[**Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling**](https://arxiv.org/pdf/1908.00222.pdf)
 
 [Jia Zheng](https://bertjiazheng.github.io/)\*, 
 Junfei Zhang\*,
@@ -64,6 +64,7 @@ Please cite our paper for any purpose of usage.
   title   = {Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling},
   author  = {Jia Zheng and Junfei Zhang and Jing Li and Rui Tang and Shenghua Gao and Zihan Zhou},
   journal = {CoRR},
+  volume  = {abs/1908.00222},
   year    = {2019}
 }
 ```
