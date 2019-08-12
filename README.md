@@ -23,6 +23,8 @@ The dataset consists of rendering images and corresponding ground truth annotati
 
 To download the dataset, please fill the [agreement form](https://forms.gle/LXg4bcjC2aEjrL9o8) that indicate you agree to the [Structured3D Terms of Use](https://drive.google.com/open?id=13ZwWpU_557ZQccwOUJ8H5lvXD7MeZFMa). After we receive your agreement form, we will provide download access to the dataset. 
 
+For fair comparison, we define standard training, validation, and testing splits as follows: *scene_00000* to *scene_02999* for training, *scene_03000* to *scene_03299* for validation, and *scene_03250* to *scene_03499* for testing.
+
 ## Tools
 
 We provide the basic code for viewing the structure annotations of our dataset.
