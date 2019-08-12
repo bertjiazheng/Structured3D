@@ -60,7 +60,7 @@ python visualize_layout.py --path /path/to/dataset --name scene_id --type empty/
 ```
 
 ## Citation
-Please cite our paper for any purpose of usage.
+Please cite `Structured3D` in your publications if it helps your research:
 ```
 @article{Structured3D,
   title   = {Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling},
@@ -74,6 +74,9 @@ Please cite our paper for any purpose of usage.
 ## License
 
 The data is released under the [Structured3D Terms of Use](https://drive.google.com/open?id=13ZwWpU_557ZQccwOUJ8H5lvXD7MeZFMa), and the code is released under the [MIT license](LICENSE).
+
+## Contact
+Please contact us at [Structured3D Group](mailto:structured3d@googlegroup.com) if you have any questions.
 
 ## Acknowledgements
 
