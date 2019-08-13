@@ -76,7 +76,7 @@ Please cite `Structured3D` in your publications if it helps your research:
 The data is released under the [Structured3D Terms of Use](https://drive.google.com/open?id=13ZwWpU_557ZQccwOUJ8H5lvXD7MeZFMa), and the code is released under the [MIT license](LICENSE).
 
 ## Contact
-Please contact us at [Structured3D Group](mailto:structured3d@googlegroup.com) if you have any questions.
+Please contact us at [Structured3D Group](mailto:structured3d@googlegroups.com) if you have any questions.
 
 ## Acknowledgements
 
