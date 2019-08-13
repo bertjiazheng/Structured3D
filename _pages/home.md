@@ -139,7 +139,7 @@ permalink: /
   </div>
 
   <div class="col-md-2 col-sm-3 col-xs-6">
-    <img class="people-pic" src="{{ "/static/img/people/ati.png" | prepend:site.baseurl }}">
+    <img class="people-pic" src="{{ "/static/img/people/ati.jpg" | prepend:site.baseurl }}">
     <div class="people-name">
       Rui Tang
       <h6>Kujiale.com</h6>
