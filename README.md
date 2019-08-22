@@ -1,12 +1,12 @@
 # Structured3D
 
-![Structured3D](assets/teaser.png)
+![Structured3D](https://structured3d-dataset.org/static/img/teaser.png)
 
 Structured3D is a large-scale photo-realistic dataset containing 3.5K house designs **(a)** created by professional designers with a variety of ground truth 3D structure annotations **(b)** and generate photo-realistic 2D images **(c)**.
 
 ## Paper
 
-[**Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling**](https://arxiv.org/pdf/1908.00222.pdf)
+**Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling**
 
 [Jia Zheng](https://bertjiazheng.github.io/)\*, 
 Junfei Zhang\*,
@@ -14,6 +14,8 @@ Junfei Zhang\*,
 Rui Tang,
 [Shenghua Gao](http://sist.shanghaitech.edu.cn/sist_en/2018/0820/c3846a31775/page.htm), 
 [Zihan Zhou](https://faculty.ist.psu.edu/zzhou)
+
+[Preprint](https://arxiv.org/pdf/1908.00222.pdf) / [Supplementary Material](https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ)
 
 (\* Equal contribution)
 
@@ -58,6 +60,7 @@ Wireframe                          | Plane                      | Floorplan
 ```bash
 python visualize_layout.py --path /path/to/dataset --name scene_id --type empty/simple/full
 ```
+We show some layout annotations in the supplementary material.
 
 ## Citation
 Please cite `Structured3D` in your publications if it helps your research:
