@@ -339,7 +339,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Structured3D 3D Visualization")
     parser.add_argument("--path", required=True,
                         help="dataset path", metavar="DIR")
-    parser.add_argument("--name", required=True,
+    parser.add_argument("--scene", required=True,
                         help="scene id", type=str)
     parser.add_argument("--type", choices=("floorplan", "wireframe", "plane"),
                         default="plane", type=str)
@@ -352,7 +352,7 @@ def main():
     args = parse_args()
 
     # load annotations from json
-    with open(os.path.join(args.path, args.name, 'annotation_3d.json')) as file:
+    with open(os.path.join(args.path, args.scene, 'annotation_3d.json')) as file:
         annos = json.load(file)
 
     if args.type == "wireframe":

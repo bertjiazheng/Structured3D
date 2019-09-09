@@ -3,21 +3,31 @@
 There is a separate subdirectory for every scene (*i.e.*, house design), which is named by a unique ID. Within each scene directory, there are separate directories for different types of data as follows:
 ```
 scene_<sceneID>
-|-- 2D_rendering
-    |-- <roomID>
-        |-- panorama
-            |-- <empty/simple/full>
-                |-- rgb_<cold/raw/warm>light.png
-                |-- semantic.png
-                |-- albedo.png
-                |-- depth.png
-                |-- normal.png
-            |-- layout.txt
-            |-- camera_xyz.txt
-|-- annotation_3d.json
+├── 2D_rendering
+│   └── <roomID>
+│       ├── panorama
+│       │   ├── <empty/simple/full>
+│       │   │   ├── rgb_<cold/raw/warm>light.png
+│       │   │   ├── semantic.png
+│       │   │   ├── albedo.png
+│       │   │   ├── depth.png
+│       │   │   └── normal.png
+│       │   ├── layout.txt
+│       │   └── camera_xyz.txt
+│       └── perspective
+│           └── full
+│               └── <positionID>
+│                   ├── rgb_rawlight.png
+│                   ├── semantic.png
+│                   ├── albedo.png
+│                   ├── depth.png
+│                   ├── normal.png
+│                   ├── layout.json
+│                   └── camera_pose.txt
+└── annotation_3d.json
 ```
 
-## Annotation Format
+# Annotation Format
 
 For each scene, we provide the primitive and relationship based structure annotation:
 
@@ -72,7 +82,7 @@ For each scene, we provide the primitive and relationship based structure annota
 }
 ```
 
-For each image, we provide semantic, albedo, depth, normal, layout annotation and camera position.
+For each image, we provide semantic, albedo, depth, normal, layout annotation and camera position. Please note that we have different layout and camera annotation format for panoramic and perspective images.
 
 **Semantic annotation (`semantic.png`)**: unsigned 8-bit integers within a PNG. We use [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2) 40-label set, see all the label ids [here](metadata/labelids.txt).
 
@@ -91,4 +101,34 @@ x_1 y_floor_1
 ...
 ```
 
+**Layout annotation for perspecitve (`layout.json`)**: We also include the junctions that formed by line segments intersecting with each other or image boundary. We consider the visible and invisible part caused by the room structure instead of furniture.
+
+```
+{
+  "junctions":[
+    {
+      "ID"            : int,              // corresponding 3D junction id, none corresponds to fake 3D junction
+      "coordinate"    : List[int],        // 2D location in the camera coordinate
+      "isvisible"     : bool              // this junction is whether occluded by the other walls
+    }
+  ],
+  "planes": [
+    {
+      "ID"            : int,              // corresponding 3D plane id
+      "visible_mask"  : List[List[int]],  // visible segmentation mask, list of junctions ids
+      "invisible_mask": List[List[int]],  // innvisible segmentation mask, list of junctions ids
+      "normal"        : List[float],      // normal in the camera coordinate
+      "offset"        : float,            // offset in the camera coordinate
+      "type"          : str               // ceiling, floor, wall
+    }
+  ]
+}
+```
+
 **Camera location for panorama (`camera_xyz.txt`)**: For each panoramic image, we only store the camera location in global coordinates. The direction of the camera is always along the negative y-axis. Global coordinate system is arbitrary, but the z-axis generally points upward.
+
+**Camera location for perspective (`camera_pose.txt`)**: For each perspective image, we store the camera location and pose in global coordinates.
+```
+vx vy vz tx ty tz ux uy uz xfov yfov 1
+```
+where `(vx, vy, vz)` is the eye viewpoint of the camera, `(tx, ty, tz)` is the view direction, `(ux, uy, uz)` is the up direction, and `xfov` and `yfov` are the half-angles of the horizontal and vertical fields of view of the camera in radians (the angle from the central ray to the leftmost/bottommost ray in the field of view), same as [Matterport3D](https://github.com/niessner/Matterport).

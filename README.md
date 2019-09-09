@@ -48,7 +48,7 @@ conda install -y descartes shapely matplotlib
 
 We use [open3D](https://github.com/intel-isl/Open3D) for wireframe and plane visualization, please refer to interaction control [here](http://www.open3d.org/docs/tutorial/Basic/visualization.html#function-draw-geometries). 
 ```bash
-python visualize_3d.py --path /path/to/dataset --name scene_id --type wireframe/plane/floorplan
+python visualize_3d.py --path /path/to/dataset --scene scene_id --type wireframe/plane/floorplan
 ```
 
 Wireframe                          | Plane                      | Floorplan
@@ -58,13 +58,12 @@ Wireframe                          | Plane                      | Floorplan
 ### Visualize 2D Layout
 
 ```bash
-python visualize_layout.py --path /path/to/dataset --name scene_id --type empty/simple/full
+python visualize_layout.py --path /path/to/dataset --scene scene_id --type perspective/panorama
 ```
-We show some layout annotations in the supplementary material.
 
 ## Citation
 Please cite `Structured3D` in your publications if it helps your research:
-```
+```bibtex
 @article{Structured3D,
   title   = {Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling},
   author  = {Jia Zheng and Junfei Zhang and Jing Li and Rui Tang and Shenghua Gao and Zihan Zhou},
