@@ -116,7 +116,7 @@ x_1 y_floor_1
     {
       "ID"            : int,              // corresponding 3D plane id
       "visible_mask"  : List[List[int]],  // visible segmentation mask, list of junctions ids
-      "invisible_mask": List[List[int]],  // innvisible segmentation mask, list of junctions ids
+      "amodal_mask"   : List[List[int]],  // amodal segmentation mask, list of junctions ids
       "normal"        : List[float],      // normal in the camera coordinate
       "offset"        : float,            // offset in the camera coordinate
       "type"          : str               // ceiling, floor, wall
