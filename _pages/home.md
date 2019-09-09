@@ -34,7 +34,8 @@ permalink: /
 <div class="row">
   <div class="col-xs-12">
     <ul>
-      <li>2019-08-01: Structured3D dataset (panoramic images) and basic code for visualization are now available! Perspective images will be released soon.</li>
+      <li>2019-09-11: The perspective part of the Structured3D dataset is now available!</li>
+      <li>2019-08-01: Structured3D dataset (panoramic images) and basic code for visualization are now available!</li>
     </ul>
   </div>
 </div><br>
