@@ -12,17 +12,6 @@ from misc.panorama import draw_boundary_from_cor_id
 from misc.colors import colormap_255
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="Structured3D 2D Layout Visualization")
-    parser.add_argument("--path", required=True,
-                        help="dataset path", metavar="DIR")
-    parser.add_argument("--scene", required=True,
-                        help="scene id", type=int)
-    parser.add_argument("--type", choices=["perspective", "panorama"], required=True,
-                        help="type of camera", type=str)
-    return parser.parse_args()
-
-
 def visualize_panorama(args):
     """visualize panorama layout
     """
@@ -71,7 +60,18 @@ def visualize_perspective(args):
                             ax.add_patch(patch)
 
                 plt.title(key)
-        plt.show()
+            plt.show()
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Structured3D 2D Layout Visualization")
+    parser.add_argument("--path", required=True,
+                        help="dataset path", metavar="DIR")
+    parser.add_argument("--scene", required=True,
+                        help="scene id", type=int)
+    parser.add_argument("--type", choices=["perspective", "panorama"], required=True,
+                        help="type of camera", type=str)
+    return parser.parse_args()
 
 
 def main():

@@ -178,7 +178,9 @@ def draw_boundary_from_cor_id(cor_id, img_src):
 
     panoEdgeC = img_src.astype(np.uint8)
     for dx, dy in [[-1, 0], [1, 0], [0, 0], [0, 1], [0, -1]]:
-        panoEdgeC[np.clip(rs+dx, 0, im_h-1), np.clip(cs+dy, 0, im_w-1), 1] = 255
+        panoEdgeC[np.clip(rs + dx, 0, im_h - 1), np.clip(cs + dy, 0, im_w - 1), 0] = 0
+        panoEdgeC[np.clip(rs + dx, 0, im_h - 1), np.clip(cs + dy, 0, im_w - 1), 1] = 0
+        panoEdgeC[np.clip(rs + dx, 0, im_h - 1), np.clip(cs + dy, 0, im_w - 1), 2] = 255
 
     return panoEdgeC
 

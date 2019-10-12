@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from shapely.geometry import Polygon
 from descartes.patch import PolygonPatch
+
 from misc.figures import plot_coords
 from misc.colors import colormap_255, semantics_cmap
 
@@ -352,7 +353,7 @@ def main():
     args = parse_args()
 
     # load annotations from json
-    with open(os.path.join(args.path, args.scene, 'annotation_3d.json')) as file:
+    with open(os.path.join(args.path, "scene_%05d" % (args.scene, ), 'annotation_3d.json')) as file:
         annos = json.load(file)
 
     if args.type == "wireframe":

@@ -15,6 +15,7 @@ Rui Tang,
 [Shenghua Gao](http://sist.shanghaitech.edu.cn/sist_en/2018/0820/c3846a31775/page.htm), 
 [Zihan Zhou](https://faculty.ist.psu.edu/zzhou)
 
+
 [Preprint](https://arxiv.org/pdf/1908.00222.pdf) / [Supplementary Material](https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ)
 
 (\* Equal contribution)
@@ -51,9 +52,9 @@ We use [open3D](https://github.com/intel-isl/Open3D) for wireframe and plane vis
 python visualize_3d.py --path /path/to/dataset --scene scene_id --type wireframe/plane/floorplan
 ```
 
-Wireframe                          | Plane                      | Floorplan
----------------------------------- | -------------------------- | ----------------------------------
-![Wireframe](assets/wireframe.png) | ![plane](assets/plane.png) | ![floorplan](assets/floorplan.png) 
+| Wireframe | Plane | Floorplan |
+| --- | --- | --- |
+| ![Wireframe](assets/3d/wireframe.png) | ![plane](assets/3d/plane.png) | ![floorplan](assets/3d/floorplan.png) |
 
 ### Visualize 2D Layout
 
@@ -61,7 +62,26 @@ Wireframe                          | Plane                      | Floorplan
 python visualize_layout.py --path /path/to/dataset --scene scene_id --type perspective/panorama
 ```
 
+#### Panorama Layout
+
+<p align="center">
+<img src="assets/pano_layout/scene_00000_485142.png" width="250">
+<img src="assets/pano_layout/scene_00000_490854.png" width="250">
+<img src="assets/pano_layout/scene_00000_492165.png" width="250">
+</p>
+
+Please refer to the [Supplementary Material](https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ) for more example ground truth room layouts.
+
+#### Perspective Layout
+
+<p align="center">
+<img src="assets/pers_layout/scene_00000_485142_0.png" width="250">
+<img src="assets/pers_layout/scene_00000_485142_1.png" width="250">
+<img src="assets/pers_layout/scene_00000_490854_2.png" width="250">
+</p>
+
 ## Citation
+
 Please cite `Structured3D` in your publications if it helps your research:
 ```bibtex
 @article{Structured3D,
@@ -78,6 +98,7 @@ Please cite `Structured3D` in your publications if it helps your research:
 The data is released under the [Structured3D Terms of Use](https://drive.google.com/open?id=13ZwWpU_557ZQccwOUJ8H5lvXD7MeZFMa), and the code is released under the [MIT license](LICENSE).
 
 ## Contact
+
 Please contact us at [Structured3D Group](mailto:structured3d@googlegroups.com) if you have any questions.
 
 ## Acknowledgements
