@@ -80,6 +80,18 @@ Please refer to the [Supplementary Material](https://drive.google.com/file/d/17F
 <img src="assets/pers_layout/scene_00000_490854_2.png" width="250">
 </p>
 
+### Visualize 3D Bounding Box
+
+```bash
+python visualize_bbox.py --path /path/to/dataset --scene scene_id
+```
+
+<p align="center">
+<img src="assets/bbox/scene_00000_485142_0.png" width="250">
+<img src="assets/bbox/scene_00000_485142_1.png" width="250">
+<img src="assets/bbox/scene_00000_490854_2.png" width="250">
+</p>
+
 ## Citation
 
 Please cite `Structured3D` in your publications if it helps your research:

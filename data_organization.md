@@ -19,17 +19,19 @@ scene_<sceneID>
 │               └── <positionID>
 │                   ├── rgb_rawlight.png
 │                   ├── semantic.png
+│                   ├── instance.png
 │                   ├── albedo.png
 │                   ├── depth.png
 │                   ├── normal.png
 │                   ├── layout.json
 │                   └── camera_pose.txt
+├── bbox_3d.json
 └── annotation_3d.json
 ```
 
 # Annotation Format
 
-For each scene, we provide the primitive and relationship based structure annotation:
+We provide the primitive and relationship based structure annotation for each scene, and oriented bounding box for each object instance.
 
 **Structure annotation (`annotation_3d.json`)**: see all the room types [here](metadata/room_types.txt).
 ```
@@ -82,9 +84,23 @@ For each scene, we provide the primitive and relationship based structure annota
 }
 ```
 
-For each image, we provide semantic, albedo, depth, normal, layout annotation and camera position. Please note that we have different layout and camera annotation format for panoramic and perspective images.
+**Bounding box (`bbox_3d.json`)**: the oriented bounding box annotation in world coordinate, same as [SUN RGB-D](http://rgbd.cs.princeton.edu).
+```
+[
+  {
+    "ID"        : int,              // instance id
+    "basis"     : Matrix[flaot],    // basis of the bounding box, one row is one basis
+    "coeffs"    : List[flaot],      // radii in each dimension
+    "centroid"  : List[flaot],      // 3D centroid of the bounding box
+  }
+]
+```
+
+For each image, we provide semantic, instance, albedo, depth, normal, layout annotation and camera position. Please note that we have different layout and camera annotation format for panoramic and perspective images.
 
 **Semantic annotation (`semantic.png`)**: unsigned 8-bit integers within a PNG. We use [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2) 40-label set, see all the label ids [here](metadata/labelids.txt).
+
+**Instance annotation for perspective (`instance.png`)**: unsigned 16-bit integers within a PNG. The maximum value (65535) denotes *background*.
 
 **Albedo data (`albedo.png`)**: unsigned 8-bit integers within a PNG.
 
@@ -102,7 +118,6 @@ x_1 y_floor_1
 ```
 
 **Layout annotation for perspecitve (`layout.json`)**: We also include the junctions that formed by line segments intersecting with each other or image boundary. We consider the visible and invisible part caused by the room structure instead of furniture.
-
 ```
 {
   "junctions":[
