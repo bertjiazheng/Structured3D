@@ -9,16 +9,6 @@ import matplotlib.pyplot as plt
 from misc.utils import get_corners_of_bb3d_no_index, project_3d_points_to_2d, parse_camera_info
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(
-        description="Structured3D 3D Bounding Box Visualization")
-    parser.add_argument("--path", required=True,
-                        help="dataset path", metavar="DIR")
-    parser.add_argument("--scene", required=True,
-                        help="scene id", type=int)
-    return parser.parse_args()
-
-
 def visualize_bbox(annos, args):
     id2index = dict()
     for index, object in enumerate(annos):
@@ -68,6 +58,16 @@ def visualize_bbox(annos, args):
             plt.axis('off')
             plt.axis([0, width, height, 0])
             plt.show()
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Structured3D 3D Bounding Box Visualization")
+    parser.add_argument("--path", required=True,
+                        help="dataset path", metavar="DIR")
+    parser.add_argument("--scene", required=True,
+                        help="scene id", type=int)
+    return parser.parse_args()
 
 
 def main():

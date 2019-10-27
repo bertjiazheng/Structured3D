@@ -159,7 +159,7 @@ def clip_polygon(polygons, vertices_hole, junctions, meta):
 
 
 def draw_geometries_with_back_face(geometries):
-    vis = open3d.Visualizer()
+    vis = open3d.visualization.Visualizer()
     vis.create_window()
     render_option = vis.get_render_option()
     render_option.mesh_show_back_face = True
@@ -236,8 +236,8 @@ def visualize_plane(annos, args, eps=0.9):
 
         plane_vis = open3d.geometry.TriangleMesh()
 
-        plane_vis.vertices = open3d.geometry.Vector3dVector(vertices)
-        plane_vis.triangles = open3d.geometry.Vector3iVector(faces)
+        plane_vis.vertices = open3d.utility.Vector3dVector(vertices)
+        plane_vis.triangles = open3d.utility.Vector3iVector(faces)
 
         if args.color == 'normal':
             if np.dot(normal, [1, 0, 0]) > eps:
