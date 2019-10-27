@@ -341,7 +341,7 @@ def parse_args():
     parser.add_argument("--path", required=True,
                         help="dataset path", metavar="DIR")
     parser.add_argument("--scene", required=True,
-                        help="scene id", type=str)
+                        help="scene id", type=int)
     parser.add_argument("--type", choices=("floorplan", "wireframe", "plane"),
                         default="plane", type=str)
     parser.add_argument("--color", choices=["normal", "manhattan"],
