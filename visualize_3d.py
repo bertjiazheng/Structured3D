@@ -43,9 +43,9 @@ def visualize_wireframe(annos):
     connected_junctions = junctions[np.unique(junction_pairs)]
     connected_colors = np.repeat(colormap[0].reshape(1, 3), len(connected_junctions), axis=0)
 
-    junction_set = open3d.PointCloud()
-    junction_set.points = open3d.Vector3dVector(connected_junctions)
-    junction_set.colors = open3d.Vector3dVector(connected_colors)
+    junction_set = open3d.geometry.PointCloud()
+    junction_set.points = open3d.utility.Vector3dVector(connected_junctions)
+    junction_set.colors = open3d.utility.Vector3dVector(connected_colors)
 
     # visualize line segments
     line_colors = np.repeat(colormap[5].reshape(1, 3), len(junction_pairs), axis=0)
@@ -58,12 +58,12 @@ def visualize_wireframe(annos):
     if len(cuboid_lines) != 0:
         line_colors[cuboid_lines] = colormap[2]
 
-    line_set = open3d.LineSet()
-    line_set.points = open3d.Vector3dVector(junctions)
-    line_set.lines = open3d.Vector2iVector(junction_pairs)
-    line_set.colors = open3d.Vector3dVector(line_colors)
+    line_set = open3d.geometry.LineSet()
+    line_set.points = open3d.utility.Vector3dVector(junctions)
+    line_set.lines = open3d.utility.Vector2iVector(junction_pairs)
+    line_set.colors = open3d.utility.Vector3dVector(line_colors)
 
-    open3d.draw_geometries([junction_set, line_set])
+    open3d.visualization.draw_geometries([junction_set, line_set])
 
 
 def project(x, meta):
@@ -234,10 +234,10 @@ def visualize_plane(annos, args, eps=0.9):
         if plane_type == 'ceiling' and semantic_type not in ['door', 'window']:
             continue
 
-        plane_vis = open3d.TriangleMesh()
+        plane_vis = open3d.geometry.TriangleMesh()
 
-        plane_vis.vertices = open3d.Vector3dVector(vertices)
-        plane_vis.triangles = open3d.Vector3iVector(faces)
+        plane_vis.vertices = open3d.geometry.Vector3dVector(vertices)
+        plane_vis.triangles = open3d.geometry.Vector3iVector(faces)
 
         if args.color == 'normal':
             if np.dot(normal, [1, 0, 0]) > eps:
@@ -341,7 +341,7 @@ def parse_args():
     parser.add_argument("--path", required=True,
                         help="dataset path", metavar="DIR")
     parser.add_argument("--scene", required=True,
-                        help="scene id", type=str)
+                        help="scene id", type=int)
     parser.add_argument("--type", choices=("floorplan", "wireframe", "plane"),
                         default="plane", type=str)
     parser.add_argument("--color", choices=["normal", "manhattan"],
