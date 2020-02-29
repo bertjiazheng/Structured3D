@@ -39,6 +39,9 @@ def visualize_perspective(args):
     for room_id in np.sort(os.listdir(scene_path)):
         room_path = os.path.join(scene_path, room_id, "perspective", "full")
 
+        if not os.path.exists(room_path):
+            continue
+
         for position_id in np.sort(os.listdir(room_path)):
             position_path = os.path.join(room_path, position_id)
 
