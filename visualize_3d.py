@@ -3,7 +3,6 @@ import json
 import argparse
 
 import open3d
-import pymesh
 import numpy as np
 import matplotlib.pyplot as plt
 from shapely.geometry import Polygon
@@ -93,6 +92,8 @@ def project_inv(x, meta):
 def triangulate(points):
     """ triangulate the plane for operation and visualization
     """
+    import pymesh
+
     num_points = len(points)
     indices = np.arange(num_points, dtype=np.int)
     segments = np.vstack((indices, np.roll(indices, -1))).T
@@ -353,7 +354,7 @@ def main():
     args = parse_args()
 
     # load annotations from json
-    with open(os.path.join(args.path, "scene_%05d" % (args.scene, ), 'annotation_3d.json')) as file:
+    with open(os.path.join(args.path, f"scene_{args.scene:05d}", "annotation_3d.json")) as file:
         annos = json.load(file)
 
     if args.type == "wireframe":

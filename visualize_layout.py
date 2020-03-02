@@ -15,7 +15,7 @@ from misc.colors import colormap_255
 def visualize_panorama(args):
     """visualize panorama layout
     """
-    scene_path = os.path.join(args.path, "scene_%05d" % (args.scene, ), "2D_rendering")
+    scene_path = os.path.join(args.path, f"scene_{args.scene:05d}", "2D_rendering")
 
     for room_id in np.sort(os.listdir(scene_path)):
         room_path = os.path.join(scene_path, room_id, "panorama")
@@ -34,7 +34,7 @@ def visualize_perspective(args):
     """
     colors = np.array(colormap_255) / 255
 
-    scene_path = os.path.join(args.path, "scene_%05d" % (args.scene, ), "2D_rendering")
+    scene_path = os.path.join(args.path, f"scene_{args.scene:05d}", "2D_rendering")
 
     for room_id in np.sort(os.listdir(scene_path)):
         room_path = os.path.join(scene_path, room_id, "perspective", "full")

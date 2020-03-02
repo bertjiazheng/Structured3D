@@ -9,12 +9,15 @@ import matplotlib.pyplot as plt
 from misc.utils import get_corners_of_bb3d_no_index, project_3d_points_to_2d, parse_camera_info
 
 
-def visualize_bbox(annos, args):
+def visualize_bbox(args):
+    with open(os.path.join(args.path, f"scene_{args.scene:05d}", "bbox_3d.json")) as file:
+        annos = json.load(file)
+
     id2index = dict()
     for index, object in enumerate(annos):
         id2index[object.get('ID')] = index
 
-    scene_path = os.path.join(args.path, "scene_%05d" % (args.scene, ), "2D_rendering")
+    scene_path = os.path.join(args.path, f"scene_{args.scene:05d}", "2D_rendering")
 
     for room_id in np.sort(os.listdir(scene_path)):
         room_path = os.path.join(scene_path, room_id, "perspective", "full")
@@ -76,10 +79,7 @@ def parse_args():
 def main():
     args = parse_args()
 
-    with open(os.path.join(args.path, "scene_%05d" % (args.scene, ), 'bbox_3d.json')) as file:
-        annos = json.load(file)
-
-    visualize_bbox(annos, args)
+    visualize_bbox(args)
 
 
 if __name__ == "__main__":

@@ -5,6 +5,14 @@ import numpy as np
 import numpy.matlib as matlib
 
 
+def xyz_2_coorxy(xs, ys, zs, H=512, W=1024):
+    us = np.arctan2(xs, ys)
+    vs = -np.arctan(zs / np.sqrt(xs**2 + ys**2))
+    coorx = (us / (2 * np.pi) + 0.5) * W
+    coory = (vs / np.pi + 0.5) * H
+    return coorx, coory
+
+
 def coords2uv(coords, width, height):
     """
     Image coordinates (xy) to uv
