@@ -42,6 +42,7 @@ git clone git@github.com:bertjiazheng/Structured3D.git
 Please use Python 3, then follow [installation](https://pymesh.readthedocs.io/en/latest/installation.html) to install [PyMesh](https://github.com/PyMesh/PyMesh) (only for plane visualization) and the other dependencies:
 ```bash
 conda install -y open3d -c open3d-admin
+conda install -y opencv -c conda-forge
 conda install -y descartes shapely matplotlib
 ```
 
@@ -55,6 +56,18 @@ python visualize_3d.py --path /path/to/dataset --scene scene_id --type wireframe
 | Wireframe | Plane | Floorplan |
 | --- | --- | --- |
 | ![Wireframe](assets/3d/wireframe.png) | ![plane](assets/3d/plane.png) | ![floorplan](assets/3d/floorplan.png) |
+
+### Visualize 3D Textured Mesh
+
+```bash
+python visualize_mesh.py --path /path/to/dataset --scene scene_id --room room_id
+```
+
+<p align="center">
+<img src="assets/mesh/scene_00000_485142.png" width="250">
+<img src="assets/mesh/scene_00000_490854.png" width="250">
+<img src="assets/mesh/scene_00000_492165.png" width="250">
+</p>
 
 ### Visualize 2D Layout
 

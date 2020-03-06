@@ -125,7 +125,7 @@ def create_plane_mesh(vertices, vertices_floor, textures, texture_floor, texture
 def visualize_mesh(args):
     """visualize as water-tight mesh
     """
-    
+
     image = cv2.imread(os.path.join(args.path, f"scene_{args.scene:05d}", "2D_rendering", 
                                     str(args.room), "panorama/full/rgb_rawlight.png"))
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)

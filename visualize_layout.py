@@ -2,8 +2,8 @@ import os
 import json
 import argparse
 
+import cv2
 import numpy as np
-import skimage.io as io
 import matplotlib.pyplot as plt
 from shapely.geometry import Polygon
 from descartes.patch import PolygonPatch
@@ -21,7 +21,7 @@ def visualize_panorama(args):
         room_path = os.path.join(scene_path, room_id, "panorama")
 
         cor_id = np.loadtxt(os.path.join(room_path, "layout.txt"))
-        img_src = io.imread(os.path.join(room_path, "full", "rgb_rawlight.png"))
+        img_src = cv2.imread(os.path.join(room_path, "full", "rgb_rawlight.png"))
         img_viz = draw_boundary_from_cor_id(cor_id, img_src)
 
         plt.axis('off')
@@ -45,7 +45,8 @@ def visualize_perspective(args):
         for position_id in np.sort(os.listdir(room_path)):
             position_path = os.path.join(room_path, position_id)
 
-            image = io.imread(os.path.join(position_path, "rgb_rawlight.png"))
+            image = cv2.imread(os.path.join(position_path, "rgb_rawlight.png"))
+
             with open(os.path.join(position_path, "layout.json")) as f:
                 annos = json.load(f)
 

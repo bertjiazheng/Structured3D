@@ -2,8 +2,8 @@ import os
 import json
 import argparse
 
+import cv2
 import numpy as np
-import skimage.io as io
 import matplotlib.pyplot as plt
 
 from misc.utils import get_corners_of_bb3d_no_index, project_3d_points_to_2d, parse_camera_info
@@ -28,10 +28,10 @@ def visualize_bbox(args):
         for position_id in np.sort(os.listdir(room_path)):
             position_path = os.path.join(room_path, position_id)
 
-            image = io.imread(os.path.join(position_path, 'rgb_rawlight.png'))
+            image = cv2.imread(os.path.join(position_path, 'rgb_rawlight.png'))
             height, width, _ = image.shape
 
-            instance = io.imread(os.path.join(position_path, 'instance.png'))
+            instance = cv2.imread(os.path.join(position_path, 'instance.png'), -1)
 
             camera_info = np.loadtxt(os.path.join(position_path, 'camera_pose.txt'))
 
