@@ -3,6 +3,7 @@ import json
 import argparse
 
 import open3d
+import pymesh
 import numpy as np
 import matplotlib.pyplot as plt
 from shapely.geometry import Polygon
@@ -92,7 +93,6 @@ def project_inv(x, meta):
 def triangulate(points):
     """ triangulate the plane for operation and visualization
     """
-    import pymesh
 
     num_points = len(points)
     indices = np.arange(num_points, dtype=np.int)
