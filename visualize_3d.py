@@ -285,7 +285,6 @@ def plot_floorplan(annos, polygons):
 
     plt.axis('equal')
     plt.axis('off')
-    plt.savefig('floorplan.png')
     plt.show()
 
 
