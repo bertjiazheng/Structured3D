@@ -34,17 +34,19 @@ def E2P(image, corner_i, corner_j, wall_height, camera, resolution=512, is_wall=
     return persp
 
 
-def create_plane_mesh(vertices, vertices_floor, textures, texture_floor, texture_ceiling, delta_height):
+def create_plane_mesh(vertices, vertices_floor, textures, texture_floor, texture_ceiling,
+    delta_height, ignore_ceiling=False):
+    # create mesh for 3D floorplan visualization
     triangles = []
     triangle_uvs = []
 
-    # the number of vertical walls (ignore ceiling and floor)
+    # the number of vertical walls
     num_walls = len(vertices)
 
     # 1. vertical wall (always rectangle)
     num_vertices = 0
     for i in range(len(vertices)):
-        # hardcode mesh for each wall
+        # hardcode triangles for each vertical wall
         triangle = np.array([[0, 2, 1], [2, 0, 3]])
         triangles.append(triangle + num_vertices)
         num_vertices += 4
@@ -61,8 +63,7 @@ def create_plane_mesh(vertices, vertices_floor, textures, texture_floor, texture
         triangle_uvs.append(triangle_uv)
 
     # 2. floor and ceiling
-    # Since the floor and ceiling may not be a rectangle, 
-    # we first triangulate this polygon.
+    # Since the floor and ceiling may not be a rectangle, triangulate the polygon first.
     tri = Triangulator()
     for i in range(len(vertices_floor)):
         tri.add_vertex(vertices_floor[i, 0], vertices_floor[i, 1])
@@ -72,6 +73,7 @@ def create_plane_mesh(vertices, vertices_floor, textures, texture_floor, texture
 
     tri.triangulate()
 
+    # polygon triangulation
     triangle = []
     for i in range(tri.getNumTriangles()):
         triangle.append([tri.get_triangle_v0(i), tri.get_triangle_v1(i), tri.get_triangle_v2(i)])
@@ -80,7 +82,8 @@ def create_plane_mesh(vertices, vertices_floor, textures, texture_floor, texture
     # add triangles for floor and ceiling
     triangles.append(triangle + num_vertices)
     num_vertices += len(np.unique(triangle))
-    triangles.append(triangle + num_vertices)
+    if not ignore_ceiling:
+        triangles.append(triangle + num_vertices)
 
     # texture for floor and ceiling
     vertices_floor_min = np.min(vertices_floor[:, :2], axis=0)
@@ -122,6 +125,21 @@ def create_plane_mesh(vertices, vertices_floor, textures, texture_floor, texture
     return mesh
 
 
+def verify_normal(corner_i, corner_j, delta_height, plane_normal):
+    edge_a = corner_j + delta_height - corner_i
+    edge_b = delta_height
+
+    normal = np.cross(edge_a, edge_b)
+    normal /= np.linalg.norm(normal, ord=2)
+
+    inner_product = normal.dot(plane_normal)
+    
+    if inner_product > 1e-8:
+        return False
+    else:
+        return True
+    
+
 def visualize_mesh(args):
     """visualize as water-tight mesh
     """
@@ -150,11 +168,14 @@ def visualize_mesh(args):
     _, vertices_holes = np.where(np.array(annos['lineJunctionMatrix'])[lines_holes])
     vertices_holes = np.unique(vertices_holes)
 
-    # load polygons
+    # parse annotations
     walls = dict()
+    walls_normal = dict()
     for semantic in annos['semantics']:
         if semantic['ID'] != int(args.room):
             continue
+
+        # find junctions of ceiling and floor 
         for planeID in semantic['planeID']:
             plane_anno = annos['planes'][planeID]
 
@@ -164,6 +185,17 @@ def visualize_mesh(args):
                 junction_pairs = [np.where(np.array(annos['lineJunctionMatrix'][lineID]))[0].tolist() for lineID in lineIDs]
                 wall = convert_lines_to_vertices(junction_pairs)
                 walls[plane_anno['type']] = wall[0]
+        
+        # save normal of the vertical walls
+        for planeID in semantic['planeID']:
+            plane_anno = annos['planes'][planeID]
+
+            if plane_anno['type'] == 'wall':
+                lineIDs = np.where(np.array(annos['planeLineMatrix'][planeID]))[0]
+                lineIDs = np.setdiff1d(lineIDs, lines_holes)
+                junction_pairs = [np.where(np.array(annos['lineJunctionMatrix'][lineID]))[0].tolist() for lineID in lineIDs]
+                wall = convert_lines_to_vertices(junction_pairs)
+                walls_normal[tuple(np.intersect1d(wall, walls['floor']))] = plane_anno['normal']
 
     # we assume that zs of floor equals 0, then the wall height is from the ceiling
     wall_height = np.mean(junctions[walls['ceiling']], axis=0)[-1]
@@ -178,6 +210,11 @@ def visualize_mesh(args):
     # wall
     for i, j in zip(wall_floor, np.roll(wall_floor, shift=-1)):
         corner_i, corner_j = junctions[i], junctions[j]
+
+        flip = verify_normal(corner_i, corner_j, delta_height, walls_normal[tuple(sorted([i, j]))])
+        
+        if flip:
+            corner_j, corner_i = corner_i, corner_j
 
         texture = E2P(image, corner_i, corner_j, wall_height, camera_center)
 
@@ -195,7 +232,8 @@ def visualize_mesh(args):
     texture_ceiling = E2P(image, corner_min, corner_max, wall_height, camera_center, is_wall=False)
 
     # create mesh
-    mesh = create_plane_mesh(corners, corner_floor, textures, texture_floor, texture_ceiling, delta_height)
+    mesh = create_plane_mesh(corners, corner_floor, textures, texture_floor, texture_ceiling,
+        delta_height, ignore_ceiling=args.ignore_ceiling)
 
     # visualize mesh
     open3d.visualization.draw_geometries([mesh])
@@ -209,6 +247,8 @@ def parse_args():
                         help="scene id", type=int)
     parser.add_argument("--room", required=True,
                         help="room id", type=int)
+    parser.add_argument("--ignore_ceiling", action='store_true',
+                        help="ignore ceiling for better visualization")
     return parser.parse_args()
 
 
