@@ -63,9 +63,7 @@ python visualize_mesh.py --path /path/to/dataset --scene scene_id --room room_id
 ```
 
 <p align="center">
-<img src="assets/mesh/scene_00000_485142.png" width="250">
-<img src="assets/mesh/scene_00000_490854.png" width="250">
-<img src="assets/mesh/scene_00000_492165.png" width="250">
+<img src="assets/mesh/scene_00000.png" width="250">
 </p>
 
 ### Visualize 2D Layout
