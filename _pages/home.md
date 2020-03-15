@@ -121,9 +121,13 @@ permalink: /
   </div>
 
   <div class="col-md-2 col-sm-3 col-xs-6">
-    <img class="people-pic" src="{{ "/static/img/people/ahui.png" | prepend:site.baseurl }}">
+    <a href="https://www.linkedin.com/in/骏飞-张-1bb82691/?locale=en_US">
+      <img class="people-pic" src="{{ "/static/img/people/ahui.png" | prepend:site.baseurl }}">
+    </a>
     <div class="people-name">
-      Junfei Zhang
+      <a href="https://www.linkedin.com/in/骏飞-张-1bb82691/?locale=en_US">
+        Junfei Zhang
+      </a>
       <h6>Kujiale.com</h6>
     </div>
   </div>
@@ -141,9 +145,13 @@ permalink: /
   </div>
 
   <div class="col-md-2 col-sm-3 col-xs-6">
-    <img class="people-pic" src="{{ "/static/img/people/ati.jpg" | prepend:site.baseurl }}">
+    <a href="https://cn.linkedin.com/in/rui-tang-50973488">
+      <img class="people-pic" src="{{ "/static/img/people/ati.jpg" | prepend:site.baseurl }}">
+    </a>
     <div class="people-name">
-      Rui Tang
+      <a href="https://cn.linkedin.com/in/rui-tang-50973488">
+        Rui Tang
+      </a>
       <h6>Kujiale.com</h6>
     </div>
   </div>
