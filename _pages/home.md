@@ -50,7 +50,7 @@ permalink: /
 <div class="row">
   <div class="col-xs-12">
     <p>
-      Recently, there has been growing interest in developing learning-based methods to detect and utilize salient semi-global or global structures, such as junctions, lines, planes, cuboids, smooth surfaces, and all types of symmetries, for 3D scene modeling and understanding. However, the ground truth annotations are often obtained via human labor, which is particularly challenging and inefficient for such tasks due to the large number of 3D structure instances (<em>e.g.</em>, line segments) and other factors such as viewpoints and occlusions. In this paper, we present a new synthetic dataset, Structured3D, with the aim to providing large-scale photo-realistic images with rich 3D structure annotations for a wide spectrum of structured 3D modeling tasks. We take advantage of the availability of millions of professional interior designs and automatically extract 3D structures from them. We generate high-quality images with an industry-leading rendering engine. We use our synthetic dataset in combination with real images to train deep neural networks for room layout estimation and demonstrate improved performance on benchmark datasets.
+      Recently, there has been growing interest in developing learning-based methods to detect and utilize salient semi-global or global structures, such as junctions, lines, planes, cuboids, smooth surfaces, and all types of symmetries, for 3D scene modeling and understanding. However, the ground truth annotations are often obtained via human labor, which is particularly challenging and inefficient for such tasks due to the large number of 3D structure instances (<em>e.g.</em>, line segments) and other factors such as viewpoints and occlusions. In this paper, we present a new synthetic dataset, Structured3D, with the aim to providing large-scale photo-realistic images with rich 3D structure annotations for a wide spectrum of structured 3D modeling tasks. We take advantage of the availability of millions of professional interior designs and automatically extract 3D structures from them. We generate high-quality images with an industry-leading rendering engine. We use our synthetic dataset in combination with real images to train deep networks for room layout estimation and demonstrate improved performance on benchmark datasets.
     </p>
   </div>
 </div><br>
@@ -64,12 +64,12 @@ permalink: /
 <div class="row">
   <div class="col-xs-12" style="margin-top: 3px; color: #666;">
     <b>Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling</b><br>
-    Jia Zheng*, Junfei Zhang*, Jing Li*, Rui Tang, Shenghua Gao, Zihan Zhou<br>
+    Jia Zheng*, Junfei Zhang*, Jing Li, Rui Tang, Shenghua Gao, Zihan Zhou<br>
     arXiv preprint 2019 /
-    <a href="https://arxiv.org/pdf/1908.00222.pdf">Preprint</a> /
+    <a href="https://arxiv.org/abs/1908.00222">Preprint</a> /
     <a href="https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ">Supplementary Material</a> /
     <a href="https://github.com/bertjiazheng/Structured3D">Code</a> <br>
-    <span style="font-size:15px;">* equal contribution</span>
+    <span style="font-size:15px;">* Equal contribution</span>
   </div>
 </div><br>
 
