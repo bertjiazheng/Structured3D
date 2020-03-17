@@ -9,13 +9,13 @@ Structured3D is a large-scale photo-realistic dataset containing 3.5K house desi
 **Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling**
 
 [Jia Zheng](https://bertjiazheng.github.io/)\*, 
-[Junfei Zhang](https://www.linkedin.com/in/骏飞-张-1bb82691/?locale=en_US)\*,
-[Jing Li](https://cn.linkedin.com/in/jing-li-253b26139)\*, 
-[Rui Tang](https://cn.linkedin.com/in/rui-tang-50973488),
+[Junfei Zhang](https://www.linkedin.com/in/骏飞-张-1bb82691/?locale=en_US)\*, 
+[Jing Li](https://cn.linkedin.com/in/jing-li-253b26139), 
+[Rui Tang](https://cn.linkedin.com/in/rui-tang-50973488), 
 [Shenghua Gao](http://sist.shanghaitech.edu.cn/sist_en/2018/0820/c3846a31775/page.htm), 
 [Zihan Zhou](https://faculty.ist.psu.edu/zzhou)
 
-[Preprint](https://arxiv.org/pdf/1908.00222.pdf) / [Supplementary Material](https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ)
+[Preprint](https://arxiv.org/abs/1908.00222) / [Supplementary Material](https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ)
 
 (\* Equal contribution)
 
