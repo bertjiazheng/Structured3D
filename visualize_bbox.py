@@ -29,9 +29,10 @@ def visualize_bbox(args):
             position_path = os.path.join(room_path, position_id)
 
             image = cv2.imread(os.path.join(position_path, 'rgb_rawlight.png'))
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             height, width, _ = image.shape
 
-            instance = cv2.imread(os.path.join(position_path, 'instance.png'), -1)
+            instance = cv2.imread(os.path.join(position_path, 'instance.png'), cv2.IMREAD_UNCHANGED)
 
             camera_info = np.loadtxt(os.path.join(position_path, 'camera_pose.txt'))
 

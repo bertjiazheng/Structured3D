@@ -22,6 +22,7 @@ def visualize_panorama(args):
 
         cor_id = np.loadtxt(os.path.join(room_path, "layout.txt"))
         img_src = cv2.imread(os.path.join(room_path, "full", "rgb_rawlight.png"))
+        img_src = cv2.cvtColor(img_src, cv2.COLOR_BGR2RGB)
         img_viz = draw_boundary_from_cor_id(cor_id, img_src)
 
         plt.axis('off')
@@ -46,6 +47,7 @@ def visualize_perspective(args):
             position_path = os.path.join(room_path, position_id)
 
             image = cv2.imread(os.path.join(position_path, "rgb_rawlight.png"))
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
             with open(os.path.join(position_path, "layout.json")) as f:
                 annos = json.load(f)
