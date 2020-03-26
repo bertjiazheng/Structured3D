@@ -27,6 +27,10 @@ To download the dataset, please fill the [agreement form](https://forms.gle/LXg4
 
 For fair comparison, we define standard training, validation, and testing splits as follows: *scene_00000* to *scene_02999* for training, *scene_03000* to *scene_03249* for validation, and *scene_03250* to *scene_03499* for testing.
 
+## Errata
+
+[2020-03-26] Fix issue [#10](https://github.com/bertjiazheng/Structured3D/issues/10) about the basis of the bounding box annotations. Please re-download the annotations if you use them.
+
 ## Tools
 
 We provide the basic code for viewing the structure annotations of our dataset.
