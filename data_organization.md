@@ -9,6 +9,7 @@ scene_<sceneID>
 │       │   ├── <empty/simple/full>
 │       │   │   ├── rgb_<cold/raw/warm>light.png
 │       │   │   ├── semantic.png
+│       │   │   ├── instance.png  // only for full config.
 │       │   │   ├── albedo.png
 │       │   │   ├── depth.png
 │       │   │   └── normal.png
@@ -84,7 +85,7 @@ We provide the primitive and relationship based structure annotation for each sc
 }
 ```
 
-**Bounding box (`bbox_3d.json`)**: the oriented bounding box annotation in world coordinate, same as [SUN RGB-D](http://rgbd.cs.princeton.edu).
+**Bounding box (`bbox_3d.json`)**: the oriented bounding box annotation in world coordinate, same as the [SUN RGB-D Dataset](http://rgbd.cs.princeton.edu).
 ```
 [
   {
@@ -100,7 +101,7 @@ For each image, we provide semantic, instance, albedo, depth, normal, layout ann
 
 **Semantic annotation (`semantic.png`)**: unsigned 8-bit integers within a PNG. We use [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2) 40-label set, see all the label ids [here](metadata/labelids.txt).
 
-**Instance annotation for perspective (`instance.png`)**: unsigned 16-bit integers within a PNG. The maximum value (65535) denotes *background*.
+**Instance annotation (`instance.png`)**: unsigned 16-bit integers within a PNG. The maximum value (65535) denotes *background*.
 
 **Albedo data (`albedo.png`)**: unsigned 8-bit integers within a PNG.
 
@@ -108,14 +109,11 @@ For each image, we provide semantic, instance, albedo, depth, normal, layout ann
 
 **Normal data (`normal.png`)**: unsigned 8-bit integers within a PNG (x, y, z), where the integer values in the file are 128 \* (1 + n), where n is a normal coordinate in range [-1, 1].
 
-**Layout annotation for panorama (`layout.txt`)**: a list of 2D positions of the junctions (from top to bottom, from left to right), same as [LayoutNet](https://github.com/zouchuhang/LayoutNet) and [HorizonNet](https://github.com/sunset1995/HorizonNet):
-```
-x_0 y_ceiling_0
-x_0 y_floor_0
-x_1 y_ceiling_1
-x_1 y_floor_1
-...
-```
+**Layout annotation for panorama (`layout.txt`)**: an ordered list of 2D positions of the junctions (same as [LayoutNet](https://github.com/zouchuhang/LayoutNet) and [HorizonNet](https://github.com/sunset1995/HorizonNet)). The order of the junctions is shown in the figure below. In our dataset, the cameras of the panoramas are aligned with the gravity direction, thus a pair of ceiling-wall and floor-wall junctions share the same x-axis coordinates.
+
+<p align="center">
+<img src="assets/pano_layout/scene_00000_485142_demo.png" width="80%">
+</p>
 
 **Layout annotation for perspecitve (`layout.json`)**: We also include the junctions that formed by line segments intersecting with each other or image boundary. We consider the visible and invisible part caused by the room structure instead of furniture.
 ```
@@ -146,4 +144,4 @@ x_1 y_floor_1
 ```
 vx vy vz tx ty tz ux uy uz xfov yfov 1
 ```
-where `(vx, vy, vz)` is the eye viewpoint of the camera, `(tx, ty, tz)` is the view direction, `(ux, uy, uz)` is the up direction, and `xfov` and `yfov` are the half-angles of the horizontal and vertical fields of view of the camera in radians (the angle from the central ray to the leftmost/bottommost ray in the field of view), same as [Matterport3D](https://github.com/niessner/Matterport).
+where `(vx, vy, vz)` is the eye viewpoint of the camera, `(tx, ty, tz)` is the view direction, `(ux, uy, uz)` is the up direction, and `xfov` and `yfov` are the half-angles of the horizontal and vertical fields of view of the camera in radians (the angle from the central ray to the leftmost/bottommost ray in the field of view), same as the [Matterport3D Dataset](https://github.com/niessner/Matterport).
