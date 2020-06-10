@@ -34,7 +34,7 @@ permalink: /
 <div class="row">
   <div class="col-xs-12">
     <ul>
-      <li>2020-05-22: We are hosting the <a href="https://holistic-3d.github.io/eccv20/challenge.html" target="_blank">Holistic 3D Vision Challenges</a> at <a href="http://eccv2020.eu/" target="_blank">ECCV 2020</a>.</li>
+      <li>2020-05-22: We are hosting the <a href="https://holistic-3d.github.io/eccv20/challenge.html" target="_blank">Holistic 3D Vision Challenges</a> on the <a href="https://holistic-3d.github.io/eccv20" target="_blank">Holistic Scene Structures for 3D Vision Workshop</a> at <a href="http://eccv2020.eu/" target="_blank">ECCV 2020</a>.</li>
       <li>2019-11-16: The 3D bounding box of each instance is now available!</li>
       <li>2019-09-11: The perspective part of the Structured3D dataset is now available!</li>
       <li>2019-08-01: Structured3D dataset (panoramic images) and basic code for visualization are now available!</li>
