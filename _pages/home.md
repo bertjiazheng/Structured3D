@@ -34,6 +34,7 @@ permalink: /
 <div class="row">
   <div class="col-xs-12">
     <ul>
+      <li>2020-07-03: The Structured3D dataset is accepted to ECCV 2020!</li>
       <li>2020-05-22: We are hosting the <a href="https://holistic-3d.github.io/eccv20/challenge.html" target="_blank">Holistic 3D Vision Challenges</a> on the <a href="https://holistic-3d.github.io/eccv20" target="_blank">Holistic Scene Structures for 3D Vision Workshop</a> at <a href="http://eccv2020.eu/" target="_blank">ECCV 2020</a>.</li>
       <li>2019-10-16: The 3D bounding box of each instance is now available!</li>
       <li>2019-09-11: The perspective part of the Structured3D dataset is now available!</li>
@@ -66,7 +67,7 @@ permalink: /
   <div class="col-xs-12" style="margin-top: 3px; color: #666;">
     <b>Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling</b><br>
     Jia Zheng*, Junfei Zhang*, Jing Li, Rui Tang, Shenghua Gao, Zihan Zhou<br>
-    arXiv preprint 2019 /
+    ECCV 2020 /
     <a href="https://arxiv.org/abs/1908.00222">Preprint</a> /
     <a href="https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ">Supplementary Material</a> /
     <a href="https://github.com/bertjiazheng/Structured3D">Code</a> <br>
