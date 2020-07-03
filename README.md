@@ -15,7 +15,9 @@ Structured3D is a large-scale photo-realistic dataset containing 3.5K house desi
 [Shenghua Gao](http://sist.shanghaitech.edu.cn/sist_en/2018/0820/c3846a31775/page.htm),
 [Zihan Zhou](https://faculty.ist.psu.edu/zzhou)
 
-[Preprint](https://arxiv.org/abs/1908.00222) / [Supplementary Material](https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ)
+European Conference on Computer Vision (ECCV), 2020
+
+[[Paper](https://arxiv.org/abs/1908.00222)] [[Supplementary Material](https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ)] [[Benchmark](https://competitions.codalab.org/competitions/24183)]
 
 (\* Equal contribution)
 
@@ -113,12 +115,11 @@ python visualize_bbox.py --path /path/to/dataset --scene scene_id
 
 Please cite `Structured3D` in your publications if it helps your research:
 ```bibtex
-@article{Structured3D,
-  title   = {Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling},
-  author  = {Jia Zheng and Junfei Zhang and Jing Li and Rui Tang and Shenghua Gao and Zihan Zhou},
-  journal = {CoRR},
-  volume  = {abs/1908.00222},
-  year    = {2019}
+@inproceedings{Structured3D,
+  title     = {Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling},
+  author    = {Jia Zheng and Junfei Zhang and Jing Li and Rui Tang and Shenghua Gao and Zihan Zhou},
+  booktitle = {Proceedings of The European Conference on Computer Vision (ECCV)}),
+  year      = {2020}
 }
 ```
 
