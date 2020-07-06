@@ -118,12 +118,14 @@ pre {
 }
 
 .people-pic {
-  max-width: 125px;
-  max-height: 125px;
+  width: 125px;
+  height: 125px;
+  border-radius: 125px;
+  margin-bottom: 5px;
 }
 
 .people-name {
-  margin: 5px 0 10px;
+  text-align: center;
 }
 
 .people-name h6 {
