@@ -67,11 +67,13 @@ permalink: /
   <div class="col-xs-12" style="margin-top: 3px; color: #666;">
     <b>Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling</b><br>
     Jia Zheng*, Junfei Zhang*, Jing Li, Rui Tang, Shenghua Gao, Zihan Zhou<br>
-    ECCV 2020 /
-    <a href="https://arxiv.org/abs/1908.00222">Preprint</a> /
-    <a href="https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ">Supplementary Material</a> /
-    <a href="https://github.com/bertjiazheng/Structured3D">Code</a> <br>
-    <span style="font-size:15px;">* Equal contribution</span>
+    European Conference on Computer Vision (ECCV), 2020<br>
+    [<a href="https://arxiv.org/abs/1908.00222">Preprint</a>]
+    [<a href="https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ">Supplementary Material</a>]
+    [<a href="https://github.com/bertjiazheng/Structured3D">Code</a>]
+    [<a href="https://competitions.codalab.org/competitions/24183">Benchmark</a>]
+    <br>
+    <span style="font-size:12px;">(* Equal contribution)</span>
   </div>
 </div><br>
 
