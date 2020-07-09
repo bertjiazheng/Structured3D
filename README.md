@@ -15,7 +15,9 @@ Structured3D is a large-scale photo-realistic dataset containing 3.5K house desi
 [Shenghua Gao](http://sist.shanghaitech.edu.cn/sist_en/2018/0820/c3846a31775/page.htm),
 [Zihan Zhou](https://faculty.ist.psu.edu/zzhou)
 
-[[Paper](https://arxiv.org/abs/1908.00222)] | [[Supplementary Material](https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ)] | [[Benchmark](https://competitions.codalab.org/competitions/24183)]
+European Conference on Computer Vision (ECCV), 2020
+
+[[Paper](https://arxiv.org/abs/1908.00222)] [[Supplementary Material](https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ)] [[Benchmark](https://competitions.codalab.org/competitions/24183)]
 
 (\* Equal contribution)
 
@@ -23,7 +25,7 @@ Structured3D is a large-scale photo-realistic dataset containing 3.5K house desi
 
 The dataset consists of rendering images and corresponding ground truth annotations (*e.g.*, semantic, albedo, depth, surface normal, layout) under different lighting and furniture configurations. Please refer to [data organization](data_organization.md) for more details.
 
-To download the dataset, please fill the [agreement form](https://forms.gle/LXg4bcjC2aEjrL9o8) that indicate you agree to the [Structured3D Terms of Use](https://drive.google.com/open?id=13ZwWpU_557ZQccwOUJ8H5lvXD7MeZFMa). After we receive your agreement form, we will provide download access to the dataset.
+To download the dataset, please fill the [agreement form](https://forms.gle/LXg4bcjC2aEjrL9o8) that indicates you agree to the [Structured3D Terms of Use](https://drive.google.com/open?id=13ZwWpU_557ZQccwOUJ8H5lvXD7MeZFMa). After we receive your agreement form, we will provide download access to the dataset.
 
 For fair comparison, we define standard training, validation, and testing splits as follows: *scene_00000* to *scene_02999* for training, *scene_03000* to *scene_03249* for validation, and *scene_03250* to *scene_03499* for testing.
 
