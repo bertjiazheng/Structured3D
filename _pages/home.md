@@ -190,7 +190,7 @@ permalink: /
 <div class="row">
   <div class="col-xs-12">
     <p>
-      We would like to thank <a href="https://Kujiale.com">Kujiale.com</a> for providing the database of house designs and the rendering engine.
+      We would like to thank Kujiale.com for providing the database of house designs and the rendering engine. We especially thank Qing Ye and Qi Wu from Kujiale.com for the help on the data rendering.
     </p>
   </div>
 </div><br>
