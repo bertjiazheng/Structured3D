@@ -131,6 +131,6 @@ The data is released under the [Structured3D Terms of Use](https://drive.google.
 
 Please contact us at [Structured3D Group](mailto:structured3d@googlegroups.com) if you have any questions.
 
-## Acknowledgements
+## Acknowledgement
 
-We would like to thank <a href="http://kujiale.com">Kujiale.com</a> for providing the database of house designs and the rendering engine.
+We would like to thank Kujiale.com for providing the database of house designs and the rendering engine. We especially thank Qing Ye and Qi Wu from Kujiale.com for the help on the data rendering.
