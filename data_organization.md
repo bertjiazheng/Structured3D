@@ -9,7 +9,7 @@ scene_<sceneID>
 │       │   ├── <empty/simple/full>
 │       │   │   ├── rgb_<cold/raw/warm>light.png
 │       │   │   ├── semantic.png
-│       │   │   ├── instance.png  // only for full config.
+│       │   │   ├── instance.png
 │       │   │   ├── albedo.png
 │       │   │   ├── depth.png
 │       │   │   └── normal.png
@@ -101,7 +101,7 @@ For each image, we provide semantic, instance, albedo, depth, normal, layout ann
 
 **Semantic annotation (`semantic.png`)**: unsigned 8-bit integers within a PNG. We use [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2) 40-label set, see all the label ids [here](metadata/labelids.txt).
 
-**Instance annotation (`instance.png`)**: unsigned 16-bit integers within a PNG. The maximum value (65535) denotes *background*.
+**Instance annotation (`instance.png`)**: unsigned 16-bit integers within a PNG. We only provide instance annotation for full configuration. The maximum value (65535) denotes *background*.
 
 **Albedo data (`albedo.png`)**: unsigned 8-bit integers within a PNG.
 
