@@ -17,22 +17,24 @@ Structured3D is a large-scale photo-realistic dataset containing 3.5K house desi
 
 European Conference on Computer Vision (ECCV), 2020
 
-[[Paper](https://arxiv.org/abs/1908.00222)] [[Supplementary Material](https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ)] [[Benchmark](https://competitions.codalab.org/competitions/24183)]
+[[Paper](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540494.pdf)] 
+[[Supplementary Material](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540494-supp.pdf)] 
+[[Benchmark](https://competitions.codalab.org/competitions/24183)]
 
 (\* Equal contribution)
 
 ## Data
 
-The dataset consists of rendering images and corresponding ground truth annotations (*e.g.*, semantic, albedo, depth, surface normal, layout) under different lighting and furniture configurations. Please refer to [data organization](data_organization.md) for more details.
+The dataset consists of rendering images and corresponding ground truth annotations (_e.g._, semantic, albedo, depth, surface normal, layout) under different lighting and furniture configurations. Please refer to [data organization](data_organization.md) for more details.
 
 To download the dataset, please fill the [agreement form](https://forms.gle/LXg4bcjC2aEjrL9o8) that indicates you agree to the [Structured3D Terms of Use](https://drive.google.com/open?id=13ZwWpU_557ZQccwOUJ8H5lvXD7MeZFMa). After we receive your agreement form, we will provide download access to the dataset.
 
-For fair comparison, we define standard training, validation, and testing splits as follows: *scene_00000* to *scene_02999* for training, *scene_03000* to *scene_03249* for validation, and *scene_03250* to *scene_03499* for testing.
+For fair comparison, we define standard training, validation, and testing splits as follows: _scene_00000_ to _scene_02999_ for training, _scene_03000_ to _scene_03249_ for validation, and _scene_03250_ to _scene_03499_ for testing.
 
 ## Errata
 
-* 2020-04-06: We provide a list of invalid cases [here](metadata/errata.txt). You can ignore these cases when using our data.
-* 2020-03-26: Fix issue [#10](https://github.com/bertjiazheng/Structured3D/issues/10) about the basis of the bounding box annotations. Please re-download the annotations if you use them.
+- 2020-04-06: We provide a list of invalid cases [here](metadata/errata.txt). You can ignore these cases when using our data.
+- 2020-03-26: Fix issue [#10](https://github.com/bertjiazheng/Structured3D/issues/10) about the basis of the bounding box annotations. Please re-download the annotations if you use them.
 
 ## Tools
 
@@ -41,11 +43,13 @@ We provide the basic code for viewing the structure annotations of our dataset.
 ### Installation
 
 Clone repository:
+
 ```bash
 git clone git@github.com:bertjiazheng/Structured3D.git
 ```
 
 Please use Python 3, then follow [installation](https://pymesh.readthedocs.io/en/latest/installation.html) to install [PyMesh](https://github.com/PyMesh/PyMesh) (only for plane visualization) and the other dependencies:
+
 ```bash
 conda install -y open3d -c open3d-admin
 conda install -y opencv -c conda-forge
@@ -61,8 +65,8 @@ We use [open3D](https://github.com/intel-isl/Open3D) for wireframe and plane vis
 python visualize_3d.py --path /path/to/dataset --scene scene_id --type wireframe/plane/floorplan
 ```
 
-| Wireframe | Plane | Floorplan |
-| --- | --- | --- |
+| Wireframe                             | Plane                         | Floorplan                             |
+| ------------------------------------- | ----------------------------- | ------------------------------------- |
 | ![Wireframe](assets/3d/wireframe.png) | ![plane](assets/3d/plane.png) | ![floorplan](assets/3d/floorplan.png) |
 
 ### Visualize 3D Textured Mesh
@@ -114,6 +118,7 @@ python visualize_bbox.py --path /path/to/dataset --scene scene_id
 ## Citation
 
 Please cite `Structured3D` in your publications if it helps your research:
+
 ```bibtex
 @inproceedings{Structured3D,
   title     = {Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling},
