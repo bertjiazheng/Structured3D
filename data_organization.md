@@ -1,6 +1,7 @@
 # Data Organization
 
-There is a separate subdirectory for every scene (*i.e.*, house design), which is named by a unique ID. Within each scene directory, there are separate directories for different types of data as follows:
+There is a separate subdirectory for every scene (_i.e._, house design), which is named by a unique ID. Within each scene directory, there are separate directories for different types of data as follows:
+
 ```
 scene_<sceneID>
 ├── 2D_rendering
@@ -9,7 +10,7 @@ scene_<sceneID>
 │       │   ├── <empty/simple/full>
 │       │   │   ├── rgb_<cold/raw/warm>light.png
 │       │   │   ├── semantic.png
-│       │   │   ├── instance.png  // only for full config.
+│       │   │   ├── instance.png
 │       │   │   ├── albedo.png
 │       │   │   ├── depth.png
 │       │   │   └── normal.png
@@ -35,6 +36,7 @@ scene_<sceneID>
 We provide the primitive and relationship based structure annotation for each scene, and oriented bounding box for each object instance.
 
 **Structure annotation (`annotation_3d.json`)**: see all the room types [here](metadata/room_types.txt).
+
 ```
 {
   // PRIMITVIES
@@ -86,6 +88,7 @@ We provide the primitive and relationship based structure annotation for each sc
 ```
 
 **Bounding box (`bbox_3d.json`)**: the oriented bounding box annotation in world coordinate, same as the [SUN RGB-D Dataset](http://rgbd.cs.princeton.edu).
+
 ```
 [
   {
@@ -101,11 +104,11 @@ For each image, we provide semantic, instance, albedo, depth, normal, layout ann
 
 **Semantic annotation (`semantic.png`)**: unsigned 8-bit integers within a PNG. We use [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2) 40-label set, see all the label ids [here](metadata/labelids.txt).
 
-**Instance annotation (`instance.png`)**: unsigned 16-bit integers within a PNG. The maximum value (65535) denotes *background*.
+**Instance annotation (`instance.png`)**: unsigned 16-bit integers within a PNG. We only provide instance annotation for full configuration. The maximum value (65535) denotes _background_.
 
 **Albedo data (`albedo.png`)**: unsigned 8-bit integers within a PNG.
 
-**Depth data (`depth.png`)**: unsigned 16-bit integers within a PNG. The units are millimeters, a value of 1000 is a meter. A zero value denotes *no reading*.
+**Depth data (`depth.png`)**: unsigned 16-bit integers within a PNG. The units are millimeters, a value of 1000 is a meter. A zero value denotes _no reading_.
 
 **Normal data (`normal.png`)**: unsigned 8-bit integers within a PNG (x, y, z), where the integer values in the file are 128 \* (1 + n), where n is a normal coordinate in range [-1, 1].
 
@@ -116,6 +119,7 @@ For each image, we provide semantic, instance, albedo, depth, normal, layout ann
 </p>
 
 **Layout annotation for perspecitve (`layout.json`)**: We also include the junctions that formed by line segments intersecting with each other or image boundary. We consider the visible and invisible part caused by the room structure instead of furniture.
+
 ```
 {
   "junctions":[
@@ -141,7 +145,9 @@ For each image, we provide semantic, instance, albedo, depth, normal, layout ann
 **Camera location for panorama (`camera_xyz.txt`)**: For each panoramic image, we only store the camera location in global coordinates. The direction of the camera is always along the negative y-axis. Global coordinate system is arbitrary, but the z-axis generally points upward.
 
 **Camera location for perspective (`camera_pose.txt`)**: For each perspective image, we store the camera location and pose in global coordinates.
+
 ```
 vx vy vz tx ty tz ux uy uz xfov yfov 1
 ```
+
 where `(vx, vy, vz)` is the eye viewpoint of the camera, `(tx, ty, tz)` is the view direction, `(ux, uy, uz)` is the up direction, and `xfov` and `yfov` are the half-angles of the horizontal and vertical fields of view of the camera in radians (the angle from the central ray to the leftmost/bottommost ray in the field of view), same as the [Matterport3D Dataset](https://github.com/niessner/Matterport).
