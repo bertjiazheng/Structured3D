@@ -17,7 +17,7 @@ scene_<sceneID>
 │       │   ├── layout.txt
 │       │   └── camera_xyz.txt
 │       └── perspective
-│           └── full
+│           └── <empty/full>
 │               └── <positionID>
 │                   ├── rgb_rawlight.png
 │                   ├── semantic.png
