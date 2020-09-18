@@ -72,6 +72,7 @@ permalink: /
     [<a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540494.pdf">Paper</a>]
     [<a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540494-supp.pdf">Supplementary Material</a>]
     [<a href="https://youtu.be/OKDrVdme-Qc">Video</a>]
+    [<a href="https://drive.google.com/file/d/1XCFaW6E2zNxyLC_qPLH_exLI2aDrhR4v/view?usp=sharing">Slide</a>]
     [<a href="https://github.com/bertjiazheng/Structured3D">Code</a>]
     [<a href="https://competitions.codalab.org/competitions/24183">Benchmark</a>]
     <br>
