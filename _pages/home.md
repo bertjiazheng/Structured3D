@@ -51,7 +51,7 @@ permalink: /
 <div class="row">
   <div class="col-xs-12">
     <p>
-      <center><iframe width="640" height="360" src="https://www.youtube.com/embed/OKDrVdme-Qc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      <center><iframe width="980" height="500" src="https://www.youtube.com/embed/OKDrVdme-Qc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
     </p>
     <p>
       Recently, there has been growing interest in developing learning-based methods to detect and utilize salient semi-global or global structures, such as junctions, lines, planes, cuboids, smooth surfaces, and all types of symmetries, for 3D scene modeling and understanding. However, the ground truth annotations are often obtained via human labor, which is particularly challenging and inefficient for such tasks due to the large number of 3D structure instances (<em>e.g.</em>, line segments) and other factors such as viewpoints and occlusions. In this paper, we present a new synthetic dataset, Structured3D, with the aim of providing large-scale photo-realistic images with rich 3D structure annotations for a wide spectrum of structured 3D modeling tasks. We take advantage of the availability of professional interior designs and automatically extract 3D structures from them. We generate high-quality images with an industry-leading rendering engine. We use our synthetic dataset in combination with real images to train deep networks for room layout estimation and demonstrate improved performance on benchmark datasets.
@@ -70,10 +70,9 @@ permalink: /
     <b>Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling</b><br>
     Jia Zheng*, Junfei Zhang*, Jing Li, Rui Tang, Shenghua Gao, Zihan Zhou<br>
     European Conference on Computer Vision (ECCV), 2020<br>
-    [<a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540494.pdf">Paper</a>]
-    [<a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540494-supp.pdf">Supplementary Material</a>]
-    [<a href="https://github.com/bertjiazheng/Structured3D">Code</a>]
-    [<a href="https://competitions.codalab.org/competitions/24183">Challenge</a>]
+    [<a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540494.pdf">pdf</a>]
+    [<a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540494-supp.pdf">supp</a>]
+    [<a href="https://github.com/bertjiazheng/Structured3D">code</a>]
     <br>
     <span style="font-size:12px;">(* Equal contribution)</span>
   </div>
