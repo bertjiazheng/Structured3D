@@ -124,7 +124,7 @@ Please cite `Structured3D` in your publications if it helps your research:
 @inproceedings{Structured3D,
   title     = {Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling},
   author    = {Jia Zheng and Junfei Zhang and Jing Li and Rui Tang and Shenghua Gao and Zihan Zhou},
-  booktitle = {Proceedings of The European Conference on Computer Vision (ECCV)}),
+  booktitle = {Proceedings of The European Conference on Computer Vision (ECCV)},
   year      = {2020}
 }
 ```
