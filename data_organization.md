@@ -93,14 +93,14 @@ We provide the primitive and relationship based structure annotation for each sc
 [
   {
     "ID"        : int,              // instance id
-    "basis"     : Matrix[flaot],    // basis of the bounding box, one row is one basis
-    "coeffs"    : List[flaot],      // radii in each dimension
-    "centroid"  : List[flaot],      // 3D centroid of the bounding box
+    "basis"     : Matrix[float],    // basis of the bounding box, one row is one basis
+    "coeffs"    : List[float],      // radii in each dimension
+    "centroid"  : List[float],      // 3D centroid of the bounding box
   }
 ]
 ```
 
-For each image, we provide semantic, instance, albedo, depth, normal, layout annotation and camera position. Please note that we have different layout and camera annotation format for panoramic and perspective images.
+For each image, we provide semantic, instance, albedo, depth, normal, layout annotation and camera position. Please note that we have different layout and camera annotation formats for panoramic and perspective images.
 
 **Semantic annotation (`semantic.png`)**: unsigned 8-bit integers within a PNG. We use [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2) 40-label set, see all the label ids [here](metadata/labelids.txt).
 
@@ -110,7 +110,7 @@ For each image, we provide semantic, instance, albedo, depth, normal, layout ann
 
 **Depth data (`depth.png`)**: unsigned 16-bit integers within a PNG. The units are millimeters, a value of 1000 is a meter. A zero value denotes _no reading_.
 
-**Normal data (`normal.png`)**: unsigned 8-bit integers within a PNG (x, y, z), where the integer values in the file are 128 \* (1 + n), where n is a normal coordinate in range [-1, 1].
+**Normal data (`normal.png`)**: unsigned 8-bit integers within a PNG (x, y, z), where the integer values in the file are 128 \* (1 + n), where n is a normal coordinate in range the [-1, 1].
 
 **Layout annotation for panorama (`layout.txt`)**: an ordered list of 2D positions of the junctions (same as [LayoutNet](https://github.com/zouchuhang/LayoutNet) and [HorizonNet](https://github.com/sunset1995/HorizonNet)). The order of the junctions is shown in the figure below. In our dataset, the cameras of the panoramas are aligned with the gravity direction, thus a pair of ceiling-wall and floor-wall junctions share the same x-axis coordinates.
 
@@ -118,7 +118,7 @@ For each image, we provide semantic, instance, albedo, depth, normal, layout ann
 <img src="assets/pano_layout/scene_00000_485142_demo.png" width="80%">
 </p>
 
-**Layout annotation for perspecitve (`layout.json`)**: We also include the junctions that formed by line segments intersecting with each other or image boundary. We consider the visible and invisible part caused by the room structure instead of furniture.
+**Layout annotation for perspective (`layout.json`)**: We also include the junctions formed by line segments intersecting with each other or image boundary. We consider the visible and invisible parts caused by the room structure instead of furniture.
 
 ```
 {
