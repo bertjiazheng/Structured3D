@@ -94,7 +94,7 @@ python visualize_layout.py --path /path/to/dataset --scene scene_id --type persp
 <img src="assets/pano_layout/scene_00000_492165.png" width="250">
 </p>
 
-Please refer to the [Supplementary Material](https://drive.google.com/file/d/17F_jIfY_QKFNmsOSvzUFZwWKrr6YUMnQ) for more example ground truth room layouts.
+Please refer to the [Supplementary Material](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540494-supp.pdf) for more example ground truth room layouts.
 
 #### Perspective Layout
 
