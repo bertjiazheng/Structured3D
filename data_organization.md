@@ -142,7 +142,7 @@ For each image, we provide semantic, instance, albedo, depth, normal, layout ann
 }
 ```
 
-**Camera location for panorama (`camera_xyz.txt`)**: For each panoramic image, we only store the camera location in global coordinates. The direction of the camera is always along the negative y-axis. Global coordinate system is arbitrary, but the z-axis generally points upward.
+**Camera location for panorama (`camera_xyz.txt`)**: For each panoramic image, we only store the camera location in millimeters in global coordinates. The direction of the camera is always along the negative y-axis. Global coordinate system is arbitrary, but the z-axis generally points upward.
 
 **Camera location for perspective (`camera_pose.txt`)**: For each perspective image, we store the camera location and pose in global coordinates.
 
@@ -150,4 +150,4 @@ For each image, we provide semantic, instance, albedo, depth, normal, layout ann
 vx vy vz tx ty tz ux uy uz xfov yfov 1
 ```
 
-where `(vx, vy, vz)` is the eye viewpoint of the camera, `(tx, ty, tz)` is the view direction, `(ux, uy, uz)` is the up direction, and `xfov` and `yfov` are the half-angles of the horizontal and vertical fields of view of the camera in radians (the angle from the central ray to the leftmost/bottommost ray in the field of view), same as the [Matterport3D Dataset](https://github.com/niessner/Matterport).
+where `(vx, vy, vz)` is the eye viewpoint of the camera in millimeters, `(tx, ty, tz)` is the view direction, `(ux, uy, uz)` is the up direction, and `xfov` and `yfov` are the half-angles of the horizontal and vertical fields of view of the camera in radians (the angle from the central ray to the leftmost/bottommost ray in the field of view), same as the [Matterport3D Dataset](https://github.com/niessner/Matterport).
