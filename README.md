@@ -116,6 +116,16 @@ python visualize_bbox.py --path /path/to/dataset --scene scene_id
 <img src="assets/bbox/scene_00000_490854_2.png" width="250">
 </p>
 
+### Visualize Floorplan
+
+```bash
+python visualize_floorplan.py --path /path/to/dataset --scene scene_id
+```
+
+<p align="center">
+<img src="assets/bbox/floorplan.png" width="500">
+</p>
+
 ## Citation
 
 Please cite `Structured3D` in your publications if it helps your research:
