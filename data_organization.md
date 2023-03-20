@@ -142,7 +142,7 @@ For each image, we provide semantic, instance, albedo, depth, normal, layout ann
 }
 ```
 
-**Camera location for panorama (`camera_xyz.txt`)**: For each panoramic image, we only store the camera location in millimeters in global coordinates. The direction of the camera is always along the negative y-axis. Global coordinate system is arbitrary, but the z-axis generally points upward.
+**Camera location for panorama (`camera_xyz.txt`)**: For each panoramic image, we only store the camera location in millimeters in global coordinates. The direction of the camera is always along the negative y-axis. The z-axis is upward.
 
 **Camera location for perspective (`camera_pose.txt`)**: For each perspective image, we store the camera location and pose in global coordinates.
 
