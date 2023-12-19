@@ -87,7 +87,7 @@ permalink: /
 <div class="row">
   <div class="col-xs-12">
     <p>
-      To download the dataset, please fill the <a href="https://forms.gle/LXg4bcjC2aEjrL9o8">agreement form</a> that indicate you agree to the <a href="https://drive.google.com/open?id=13ZwWpU_557ZQccwOUJ8H5lvXD7MeZFMa">Structured3D Terms of Use</a>. After we receive your agreement form, we will provide download access to the dataset. We also provide the <a href="https://github.com/bertjiazheng/Structured3D">basic code</a> for for viewing the structure annotations of our dataset.
+      To download the dataset, please fill the <a href="https://forms.gle/LXg4bcjC2aEjrL9o8">agreement form</a> that indicates you agree to the <a href="https://drive.google.com/open?id=13ZwWpU_557ZQccwOUJ8H5lvXD7MeZFMa">Structured3D Terms of Use</a>. After we receive your agreement form, we will provide download access to the dataset. We also provide the <a href="https://github.com/bertjiazheng/Structured3D">basic code</a> for viewing the structure annotations of our dataset.
     </p>
   </div>
 </div><br>
@@ -184,6 +184,21 @@ permalink: /
 
 <div class="row">
   <div class="col-xs-12">
+    <h2>Related Links</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <ul>
+      <li><a href="https://fangchuan.github.io/ctrl-room.github.io/">Ctrl-Room</a> provides the semantic labels for 3D bounding box annotations.</li>
+      <li><a href="https://github.com/bluestyle97/PNVS">PNVS</a> provides more panoramic views for novel view synthesis task.</li>
+    </ul>
+  </div>
+</div><br>
+
+<div class="row">
+  <div class="col-xs-12">
     <h2>Acknowledgements</h2>
   </div>
 </div>
@@ -191,7 +206,7 @@ permalink: /
 <div class="row">
   <div class="col-xs-12">
     <p>
-      We would like to thank Kujiale.com for providing the database of house designs and the rendering engine. We especially thank Qing Ye and Qi Wu from Kujiale.com for the help on the data rendering.
+      We would like to thank Kujiale.com for providing the database of house designs and the rendering engine. We especially thank Qing Ye and Qi Wu from Kujiale.com for their help with the data rendering.
     </p>
   </div>
 </div><br>
