@@ -126,23 +126,19 @@ permalink: /
   </div>
 
   <div class="col-md-2 col-sm-3 col-xs-6">
-    <a href="https://www.linkedin.com/in/骏飞-张-1bb82691/?locale=en_US">
-      <img class="people-pic" src="{{ "/static/img/people/ahui.png" | prepend:site.baseurl }}">
-    </a>
+    <img class="people-pic" src="{{ "/static/img/people/ahui.png" | prepend:site.baseurl }}">
     <div class="people-name">
-      <a href="https://www.linkedin.com/in/骏飞-张-1bb82691/?locale=en_US">
         Junfei Zhang
-      </a>
       <h6>Kujiale.com</h6>
     </div>
   </div>
 
   <div class="col-md-2 col-sm-3 col-xs-6">
-    <a href="https://www.linkedin.com/in/jing-li-253b26139/?originalSubdomain=cn">
+    <a href="https://lijing1996.github.io/">
       <img class="people-pic" src="{{ "/static/img/people/jing.jpg" | prepend:site.baseurl }}">
     </a>
     <div class="people-name">
-      <a href="https://www.linkedin.com/in/jing-li-253b26139/?originalSubdomain=cn">
+      <a href="https://lijing1996.github.io">
         Jing Li
       </a>
       <h6>ShanghaiTech University</h6>
@@ -150,33 +146,29 @@ permalink: /
   </div>
 
   <div class="col-md-2 col-sm-3 col-xs-6">
-    <a href="https://cn.linkedin.com/in/rui-tang-50973488">
-      <img class="people-pic" src="{{ "/static/img/people/ati.jpg" | prepend:site.baseurl }}">
-    </a>
+    <img class="people-pic" src="{{ "/static/img/people/ati.jpg" | prepend:site.baseurl }}">
     <div class="people-name">
-      <a href="https://cn.linkedin.com/in/rui-tang-50973488">
         Rui Tang
-      </a>
       <h6>Kujiale.com</h6>
     </div>
   </div>
 
   <div class="col-md-2 col-sm-3 col-xs-6">
-    <a href="http://sist.shanghaitech.edu.cn/sist_en/2018/0820/c3846a31775/page.htm">
+    <a href="https://sist.shanghaitech.edu.cn/gaoshh_en">
       <img class="people-pic" src="{{ "/static/img/people/shenghua.jpg" | prepend:site.baseurl }}">
     </a>
     <div class="people-name">
-      <a href="http://sist.shanghaitech.edu.cn/sist_en/2018/0820/c3846a31775/page.htm">Shenghua Gao</a>
+      <a href="https://sist.shanghaitech.edu.cn/gaoshh_en">Shenghua Gao</a>
       <h6>ShanghaiTech University</h6>
     </div>
   </div>
 
   <div class="col-md-2 col-sm-3 col-xs-6">
-    <a href="https://faculty.ist.psu.edu/zzhou/">
+    <a href="https://zihan-z.github.io/">
       <img class="people-pic" src="{{ "/static/img/people/zihan.jpg" | prepend:site.baseurl }}">
     </a>
     <div class="people-name">
-      <a href="https://faculty.ist.psu.edu/zzhou/">Zihan Zhou</a>
+      <a href="https://zihan-z.github.io/">Zihan Zhou</a>
       <h6>Penn State University</h6>
     </div>
   </div>
