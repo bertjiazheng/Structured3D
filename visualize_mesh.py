@@ -240,7 +240,7 @@ def visualize_mesh(args):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Structured3D 2D Layout Visualization")
+    parser = argparse.ArgumentParser(description="Structured3D 3D Textured Mesh Visualization")
     parser.add_argument("--path", required=True,
                         help="dataset path", metavar="DIR")
     parser.add_argument("--scene", required=True,
